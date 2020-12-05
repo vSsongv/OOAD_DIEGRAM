@@ -1,23 +1,19 @@
 package DIEGRAM;
 
-import java.util.*;
-
 public abstract class Diegram {
 	
 	private static DayDietSheet[] ds = new DayDietSheet[10];
 	private static int current = 0;
 	
-	public static DayDietSheet requestDayDietSheet(int year, int mounth, int day) {
+	public static DayDietSheet requestDayDietSheet(int year, int month, int day) {
 		
-		ds[current] = new DayDietSheet(year, mounth, day);
+		ds[current] = new DayDietSheet(year, month, day);
 		
 		return ds[current];
 	}
 	
-	public static abstract void makeDiet(String mealType);
+	public void makeDiet(String mealType) { };
 	
-	public static abstract void D();
-	
-	
+	public void enterFood(String name, int amount) { };
 
 }
