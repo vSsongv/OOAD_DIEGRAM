@@ -2,7 +2,7 @@ package DIEGRAM;
 
 import java.util.*;
 
-public class DayDietSheet {
+public class DayDietSheet extends Diegram{
 	
 	private int month;
 	private int day;
