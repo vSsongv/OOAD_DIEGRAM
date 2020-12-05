@@ -22,9 +22,9 @@ public class Food {
 		return;
 	}
 	
-	private Food calculate(Food f, int amount)
-	{
-		return Food;
-	}
+//	private Food calculate(Food f, int amount)
+//	{
+//		return Food;
+//	}
 
 }

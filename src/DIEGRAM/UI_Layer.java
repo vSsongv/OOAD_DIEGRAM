@@ -52,9 +52,9 @@ public class UI_Layer {
 	   
 	   static void printSYSInfo() {
 	      
-	      System.out.println("************************DIEGRAM************************");
+	      System.out.println("***********************DIEGRAM*************************");
 	      System.out.println("*                                                     *");
-	      System.out.println("*                      설명을 쓸 공간                                                  *");
+	      System.out.println("*                    식단 관리 서비스                                                  *");
 	      System.out.println("*                                                     *");
 	      System.out.println("*******************************************************");
 	      
@@ -71,5 +71,3 @@ public class UI_Layer {
 	      
 	   }
 	}
-
-}
