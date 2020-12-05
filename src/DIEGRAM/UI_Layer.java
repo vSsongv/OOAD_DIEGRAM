@@ -51,7 +51,7 @@ public class UI_Layer {
 	   }
 	   
 	   static void printSYSInfo() {
-	      
+		  
 	      System.out.println("***********************DIEGRAM*************************");
 	      System.out.println("*      달력에 먹은 식단을 입력하고, 섭취한 음식의 통계치를 볼 수 있는             *");
 	      System.out.println("*                  당신을 위한 식단 관리 서비스                                     *");
@@ -61,7 +61,8 @@ public class UI_Layer {
 	   }
 	   
 	   static void recordDiet() {
-	      
+		   int year = 2020, mounth = 11, day = 1;
+		   //Diegram.requestDayDietSheet(year, mounth, day);
 	   }
 
 	   
