@@ -1,8 +1,6 @@
 package DIEGRAM;
 
-import java.util.*;
-
-public class Goal {
+public class Goal extends Diegram{
 
 	private int weight;
 	private int height;
@@ -54,7 +52,7 @@ public class Goal {
 	}
 	
 	
-	public void eneterTarget(int sodiumTarget, int sugarTarget) //식이요법 환자들 같은 당류, 나트륨 량을 조절해야 되는 User에게 해당 제한값을 입력받는다.
+	public void enterTarget(int sodiumTarget, int sugarTarget) //식이요법 환자들 같은 당류, 나트륨 량을 조절해야 되는 User에게 해당 제한값을 입력받는다.
 	{
 		this.sodiumTarget = sodiumTarget;
 		this.sugarTarget = sugarTarget;
