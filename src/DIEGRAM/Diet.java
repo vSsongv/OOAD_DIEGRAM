@@ -39,4 +39,5 @@ public class Diet{
 	   public int getCalorieTotal() {
 	       return this.calorieTotal;
 	   }
+
 }
