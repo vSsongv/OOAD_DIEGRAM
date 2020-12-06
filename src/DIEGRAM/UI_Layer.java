@@ -1,4 +1,4 @@
-package DIEGRAM;
+ package DIEGRAM;
 
 import java.util.*;
 

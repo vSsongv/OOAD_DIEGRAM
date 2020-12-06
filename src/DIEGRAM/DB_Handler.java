@@ -11,7 +11,6 @@ public class DB_Handler {
 	
 	public static void getSheetInfo(DayDietSheet ds) //저장된 DayDietSheet정보를 불러온다.
 	{
-		DayDietSheet findds = null;
 		for(DayDietSheet dds : DataBase.DayDietSheetList)
 		{
 			if(dds.getYear() == ds.getYear() && dds.getMonth() == ds.getMonth() && dds.getDay() == ds.getDay())

@@ -1,4 +1,4 @@
-package DIEGRAM;
+ package DIEGRAM;
 
 public class Goal extends Diegram{
 
