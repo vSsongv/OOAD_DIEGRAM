@@ -41,7 +41,7 @@ public class Goal {
 	public int analyzeRecommendedCalorie() //User의 권장칼로리를 계산하여 User에게 보여줌.
 	{
 		int adjustWeiht = Integer.parseInt(String.valueOf(Math.round((height - 100) * 0.9)));
-		calorieTarget = Integer.parseInt(String.valueOf(Math.round( adjustWeiht + ((weight - adjustWeiht) * 0.25))));
+		calorieTarget = activeVolume * Integer.parseInt(String.valueOf(Math.round( adjustWeiht + ((weight - adjustWeiht) * 0.25))));
 		return calorieTarget;
 	}
 	
