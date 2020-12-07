@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class DB_Handler {
 	
 	private static class DataBase{
-		static Goal userGoal = new Goal();
+		static Goal userGoal = null;
 		static ArrayList<DayDietSheet> DayDietSheetList = new ArrayList<DayDietSheet>();
 	}
 	
@@ -18,6 +18,10 @@ public class DB_Handler {
 			}
 		}
 		return null;
+	}
+	
+	public static Goal getUserGoal() {
+		return DataBase.userGoal;
 	}
 	
 	public static void getSheetInfo(DayDietSheet ds) //저장된 DayDietSheet정보를 불러온다.
@@ -33,6 +37,7 @@ public class DB_Handler {
 				ds.setDaysaccharideTotal(dds.getDaysaccharideTotal());
 				ds.setDaysodiumTotal(dds.getDaysodiumTotal());
 				ds.setD(dds.getD());
+				ds.setCurrent(dds.getCurrent());
 				return;
 			}
 		}
@@ -51,6 +56,7 @@ public class DB_Handler {
 			if(dds.getYear() == ds.getYear() && dds.getMonth() == ds.getMonth() && dds.getDay() == ds.getDay())
 			{
 				DataBase.DayDietSheetList.remove(dds);
+				break;
 			}
 		}
 		DataBase.DayDietSheetList.add(ds);		

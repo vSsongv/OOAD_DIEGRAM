@@ -25,16 +25,17 @@ public class Diet {
 	   }
 	   
 	   public void enterFood(String name, int amount) //f를 만들고, f attributes내용들을 찾아 Total nutrients 값을 갱신.
-	   {
-	      f[numOfFood] = new Food(name, amount);
-	      this.calorieTotal += f[numOfFood].getCalories();
-	      this.proteinTotal += f[numOfFood].getProtein();
-	      this.fatTotal += f[numOfFood].getFat();
-	      this.saccharideTotal += f[numOfFood].getSaccharide();
-	      this.sodiumTotal += f[numOfFood].getSodium();	      
-	      this.numOfFood++;
-	      return;
-	   }
+	      {
+	         f[numOfFood] = new Food(name, amount);
+	         this.calorieTotal += f[numOfFood].getCalories();
+	         this.proteinTotal += f[numOfFood].getProtein();
+	         this.fatTotal += f[numOfFood].getFat();
+	                   this.carbohydrateTotal += f[numOfFood].getcarbohydrate();
+	         this.saccharideTotal += f[numOfFood].getSaccharide();
+	         this.sodiumTotal += f[numOfFood].getSodium();         
+	         this.numOfFood++;
+	         return;
+	      }
 	   
 	   public int getCalorieTotal() {
 	       return this.calorieTotal;

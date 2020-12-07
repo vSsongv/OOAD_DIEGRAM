@@ -51,6 +51,10 @@ public class Diegram {
 		g.registerActiveVolume(activeVolume);
 	}
 	
+	public static int analyzeRecommendedCalorie() {
+		return g.analyzeRecommendedCalorie();
+	}
+	
 	public static void adjustCalorie(int calorie){
 		g.adjustCalorie(calorie);
 	}
