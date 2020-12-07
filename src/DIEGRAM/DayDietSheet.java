@@ -1,6 +1,6 @@
 package DIEGRAM;
 
-public class DayDietSheet extends Diegram{
+public class DayDietSheet {
 	
 	private Diet[] d = new Diet[10];
 	private int current = 0;
@@ -8,6 +8,7 @@ public class DayDietSheet extends Diegram{
 	private int month = 0;
 	private int day = 0;
 	private int dayCalorieTotal = 0;
+	private int dayProteinTotal = 0;
 	private int dayfatTotal = 0;
 	private int daysaccharideTotal = 0;
 	private int daysodiumTotal = 0;
@@ -19,14 +20,33 @@ public class DayDietSheet extends Diegram{
 		DB_Handler.getSheetInfo(this);
 	} 
 	
-	@Override
 	public void makeDiet(String mealType)
 	{
 	   this.d[current] = new Diet(mealType);
 	   return;
 	}
 	
-	public void enterFood(String name, int amount) { }
+	public void enterFood(String name, int amount) { 
+		this.d[current].enterFood(name, amount);
+	}
+	
+	public void endRecord() {
+		this.dayCalorieTotal += this.d[current].getCalorieTotal();
+		this.dayProteinTotal += this.d[current].getProteinTotal();
+		this.daycarbohydrateTotal += this.d[current].getCarbohydrateTotal();
+		this.dayfatTotal += this.d[current].getFatTotal();
+		this.daysodiumTotal += this.d[current].getSodiumTotal();
+		this.daysaccharideTotal += this.d[current].getSaccharideTotal();
+		DB_Handler.saveDayDietSheet(this);
+	}
+
+	public int getDayProteinTotal() {
+		return dayProteinTotal;
+	}
+
+	public void setDayProteinTotal(int dayProteinTotal) {
+		this.dayProteinTotal = dayProteinTotal;
+	}
 
 	public Diet[] getD() {
 		return d;

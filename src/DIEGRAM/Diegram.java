@@ -6,6 +6,19 @@ public class Diegram {
 	private static int current = 0;
 	private static Goal g;
 	
+	public static void makeDummyData() {
+		DayDietSheet ds = new DayDietSheet(2020, 12, 8);
+		ds.makeDiet("¾ÆÄ§");
+		ds.enterFood("µÈÀåÂî°³", 1);
+		ds.enterFood("°ø±â¹ä", 1);
+		ds.enterFood("±èÄ¡", 1);
+		ds.endRecord();
+	}
+	
+	public static void systemStart() {
+		DB_Handler.FDinsert();
+	}
+	
 	public static DayDietSheet requestDayDietSheet(int year, int month, int day) {
 		
 		ds[current] = new DayDietSheet(year, month, day);
@@ -13,32 +26,41 @@ public class Diegram {
 		return ds[current];
 	}
 
-	public void makeDiet(String mealType) {}
+	public static void makeDiet(String mealType) {
+		ds[current].makeDiet(mealType);
+	}
 	
-	public void enterFood(String name,int amount) {}
+	public static void enterFood(String name,int amount) {
+		ds[current].enterFood(name, amount);
+	}
 	
-	public void endRecord() {}
+	public static void endRecord() {
+		ds[current].endRecord();
+		current++;
+	}
 	
-	public void makeSetGoal() {
+	public static void makeSetGoal() {
 		g = new Goal();
 	}
 	
-	public void registerInfo(int height,int weight) {
+	public static void registerInfo(int height,int weight) {
 		g.registerInfo(height, weight);
 	}
 	
-	public void registerActiveVolume(int activeVolume) {
+	public static void registerActiveVolume(int activeVolume) {
 		g.registerActiveVolume(activeVolume);
 	}
 	
-	public void adjustCalorie(int calorie){
+	public static void adjustCalorie(int calorie){
 		g.adjustCalorie(calorie);
 	}
 	
-	public void enterTarget(int sodiumTarget,int sugarTarget) {
+	public static void enterTarget(int sodiumTarget,int sugarTarget) {
 		g.enterTarget(sodiumTarget, sugarTarget);
 	}
 	
-	public void endSetGoal() {}
+	public static void endSetGoal() {
+		g.endSetGoal();
+	}
 
 }

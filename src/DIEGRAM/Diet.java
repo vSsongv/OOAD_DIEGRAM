@@ -1,9 +1,9 @@
 package DIEGRAM;
 
-public class Diet{
+public class Diet {
    
 	   private Food[] f = new Food[15];
-	   
+	
 	   private String mealType;
 	   private int numOfFood;
 	   private int calorieTotal;
@@ -39,5 +39,38 @@ public class Diet{
 	   public int getCalorieTotal() {
 	       return this.calorieTotal;
 	   }
+
+	public Food[] getF() {
+		return f;
+	}
+
+	public String getMealType() {
+		return mealType;
+	}
+
+	public int getNumOfFood() {
+		return numOfFood;
+	}
+
+	public int getFatTotal() {
+		return fatTotal;
+	}
+
+	public int getProteinTotal() {
+		return proteinTotal;
+	}
+
+	public int getSaccharideTotal() {
+		return saccharideTotal;
+	}
+
+	public int getSodiumTotal() {
+		return sodiumTotal;
+	}
+
+	public int getCarbohydrateTotal() {
+		return carbohydrateTotal;
+	}
+	   
 
 }
