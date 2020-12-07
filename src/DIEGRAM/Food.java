@@ -13,12 +13,36 @@ public class Food {
 	
 	public Food(String name, int amount) //creator
 	{
-		Food f = FoodData.getFoodInfo(this.name);
+		this.name = name;
+		this.amount = amount;
+		Food f = FoodData.getFoodInfo(name);
 		this.calculate(f);
 	}
 	
+	//이름 , 양, 칼로리, 단백질, 지방, 탄수화물, 당, 나트륨
 	public Food(String name, int amount, int calories, int protein,
-			int fat, int carbohydrate, int saccharide, int sodium){ }
+			int fat, int carbohydrate, int saccharide, int sodium)
+	{
+		this.name = name;
+		this.amount = amount;
+		this.calories = calories;
+		this.protein = protein;
+		this.fat = fat;
+		this.carbohydrate = carbohydrate;
+		this.saccharide = saccharide;
+		this.sodium = sodium;
+	}
+	
+	private void calculate(Food f)
+	{
+		this.calories = (f.calories * this.amount);
+		this.carbohydrate = (f.carbohydrate * this.amount);
+		this.fat = (f.fat * this.amount);
+		this.protein = (f.protein * this.amount);
+		this.saccharide =(f.saccharide * this.amount);
+		this.sodium = (f.sodium * this.amount);
+	}
+
 
 	public int getAmount() {
 		return amount;
@@ -82,16 +106,6 @@ public class Food {
 
 	public void setSodium(int sodium) {
 		this.sodium = sodium;
-	}
-	
-	private void calculate(Food f)
-	{
-		this.calories = (f.calories * this.amount);
-		this.carbohydrate = (f.carbohydrate * this.amount);
-		this.fat = (f.fat * this.amount);
-		this.protein = (f.protein * this.amount);
-		this.saccharide =(f.saccharide * this.amount);
-		this.sodium = (f.sodium * this.amount);
 	}
 
 }

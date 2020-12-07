@@ -1,6 +1,6 @@
  package DIEGRAM;
 
-public class Goal extends Diegram{
+public class Goal {
 
 	private int weight;
 	private int height;
