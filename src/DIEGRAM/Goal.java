@@ -64,4 +64,16 @@ public class Goal {
 		DB_Handler.addGoal(this);
 		return;
 	}
+
+	public int getCalorieTarget() {
+		return calorieTarget;
+	}
+
+	public int getSodiumTarget() {
+		return sodiumTarget;
+	}
+
+	public int getSugarTarget() {
+		return sugarTarget;
+	}
 }
